@@ -75,7 +75,7 @@ flowchart TD
 
 ## Screenshot
 
-Berikut tampilan awal aplikasi 2EZ4U APP. Pilih operasi dari panel **MENU OPERASI**, isi parameter jika diperlukan, lalu tekan tombol untuk menjalankan operasi. Hasil dan log operasi ditampilkan pada area aplikasi.
+Berikut tampilan awal aplikasi 2EZ4U APP.
 
 ![Tampilan awal 2EZ4U APP](docs/tampilan-awal.png)
 
