@@ -103,6 +103,12 @@ python3 app.py
 ```
 5. Pada jendela aplikasi, pilih menu operasi di sebelah kiri, masukkan parameter yang diperlukan, lalu jalankan operasi. Periksa panel hasil dan `COMMAND / LOG` untuk melihat hasilnya.
 
+### Alasan Pemilihan Algoritma
+- **Insertion Sort:** dipilih sebagai pembanding karena sederhana dan efektif untuk data kecil, tetapi jumlah perbandingannya dapat meningkat secara kuadratik pada data besar.
+- **Merge Sort:** dipilih untuk mengurutkan data besar karena kompleksitas waktunya O(n log n) dan implementasinya stabil.
+- **Linear Search:** dipilih karena dapat mencari data tanpa mengharuskan data terurut terlebih dahulu.
+- **Binary Search:** dipilih untuk pencarian berulang pada data yang telah diurutkan, sehingga pencarian dapat dilakukan dalam O(log n). Pengurutan awal tetap memerlukan biaya komputasi.
+
 ### Mengapa Circular Queue Menggunakan `count`?
 
 Circular Queue menggunakan tiga variabel utama, yaitu `front`, `rear`, dan `count`.
