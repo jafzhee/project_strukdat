@@ -136,16 +136,3 @@ Pengujian dilakukan menggunakan Insertion Sort dan Merge Sort dengan ukuran data
 | 16.000 | 60.049.240 | 200.926 | 299x |
 
 Rasio perbandingan menunjukkan banyaknya perbandingan Insertion Sort dibandingkan Merge Sort untuk ukuran data yang sama. Angka rasio dibulatkan ke bilangan bulat terdekat.
-
-### Grafik Pertumbuhan Jumlah Perbandingan
-
-Grafik berikut memperlihatkan pertumbuhan jumlah perbandingan kedua algoritma saat jumlah data bertambah.
-
-```mermaid
-xychart-beta
-    title "Jumlah Perbandingan Sorting"
-    x-axis "Jumlah Data (n)" [500, 1000, 2000, 4000, 8000, 16000]
-    y-axis "Perbandingan (juta)" 0 --> 65
-    line [0.056, 0.234, 0.962, 3.832, 15.059, 60.049]
-    line [0.004, 0.009, 0.019, 0.042, 0.093, 0.201]# project_strukdat
-```
