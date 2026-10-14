@@ -148,3 +148,4 @@ xychart-beta
     y-axis "Perbandingan (juta)" 0 --> 65
     line [0.056, 0.234, 0.962, 3.832, 15.059, 60.049]
     line [0.004, 0.009, 0.019, 0.042, 0.093, 0.201]# project_strukdat
+```
