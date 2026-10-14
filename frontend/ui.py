@@ -128,7 +128,7 @@ class Mesin:
         k0 = s.kerja
         p = s.get(i)
         return Hasil("Pesanan indeks %s dari %s. %s: %s" % (ribu(i), ribu(len(s)), s.satuan, ribu(s.kerja - k0)),
-                     ["kolom", "isi"], detail(p), "M1 - " + ("larik" if jenis == "array" else "rantai"),
+                     ["kolom", "isi"], detail(p), "M1 - " + ("array" if jenis == "array" else "rantai"),
                      "Array: akses O(1), tidak ada yang digeser. LinkList: harus menelusur i simpul dari head, O(n).")
 
     def m1_tambah(self, jenis, prioritas, v):
@@ -138,7 +138,7 @@ class Mesin:
         pos = tambah_ke(s, p)
         return Hasil("%s masuk di indeks %s (dari %s). %s: %s. Panjang sekarang %s." %
                      (p.oid, ribu(pos), ribu(n + 1), s.satuan, ribu(s.kerja - k0), ribu(len(s))),
-                     ["kolom", "isi"], detail(p), "M1 - " + ("larik" if jenis == "array" else "rantai"),
+                     ["kolom", "isi"], detail(p), "M1 - " + ("array" if jenis == "array" else "rantai"),
                      "REGULER=belakang, PRIORITAS=tengah (n/2), VIP=depan. Bandingkan biayanya di Array vs LinkList.")
 
     def m1_hapus(self, jenis, v):
@@ -150,7 +150,7 @@ class Mesin:
         p = s.remove(i)
         return Hasil("%s dihapus dari indeks %s. %s: %s. Panjang sekarang %s." %
                      (p.oid, ribu(i), s.satuan, ribu(s.kerja - k0), ribu(len(s))),
-                     ["kolom", "isi"], detail(p), "M1 - " + ("larik" if jenis == "array" else "rantai"))
+                     ["kolom", "isi"], detail(p), "M1 - " + ("array" if jenis == "array" else "rantai"))
     def m2_postfix(self, v):
         jejak = []
         try:
@@ -310,7 +310,7 @@ class Mesin:
                       [P("Berapa kali dequeue", "2", hint="sampai panjang antrean; coba 1 lalu 100")],
                       lambda v: self.m2_dequeue("naif", v), "DEQUEUE"))
         M.append(Menu(g, "QUEUE - DEQUEUE CIRCULAR", "Queue circular: ambil dari depan dengan memajukan penunjuk",
-                      "Hanya penunjuk front yang maju, isi larik tidak digeser sama sekali. O(1).",
+                      "Hanya penunjuk front yang maju, isi array tidak digeser sama sekali. O(1).",
                       [P("Berapa kali dequeue", "2", hint="sampai panjang antrean; coba 1 lalu 100")],
                       lambda v: self.m2_dequeue("circular", v), "DEQUEUE"))
         g = "M3 - SORT DAN SEARCH"
@@ -320,7 +320,7 @@ class Mesin:
                        P("Diurutkan menurut", "harga", pilih_kunci)],
                       lambda v: self.m3_sort("insertion", v), "URUTKAN"))
         M.append(Menu(g, "SORT - MERGE SORT", "Sort: merge sort, O(n log n)",
-                      "Larik dibelah dua terus-menerus, lalu potongan yang sudah terurut disatukan kembali.",
+                      "array dibelah dua terus-menerus, lalu potongan yang sudah terurut disatukan kembali.",
                       [P("Jumlah baris diurutkan", "4000", hint="diambil dari awal data; boleh sampai 200.000"),
                        P("Diurutkan menurut", "harga", pilih_kunci)],
                       lambda v: self.m3_sort("merge", v), "URUTKAN"))
